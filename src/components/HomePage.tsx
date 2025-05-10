@@ -1,19 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-// Define the User type
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  username: string;
-  phone: string;
-  website: string;
-  address: {
-    city: string;
-  };
-}
-
+import { User } from "../types/user";
 function HomePage() {
   const [users, setUsers] = useState<User[]>([]);
 
@@ -41,7 +28,8 @@ function HomePage() {
           <p><strong>Phone:</strong> {user.phone}</p>
           <p><strong>Website:</strong> {user.website}</p>
           <p><strong>City:</strong> {user.address.city}</p>
-          <Link to={`/users/${user.id}`}>View Profile</Link>
+          <Link to={`/users/${user.id}`}> <button>View Profile</button></Link>
+
         </div>
       ))}
     </div>
