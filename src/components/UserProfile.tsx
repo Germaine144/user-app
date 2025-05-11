@@ -33,14 +33,16 @@ function UserProfile (){
    if(error || !user)
     return <p>User Credential Not Found ....</p>
   return (
-    <div  className="bg-white p-6 rounded-lg shadow-md border border-gray-200 pt-6 
-    transition duration-300 ease-in-out  hover:bg-gradient-to-r hover:from-blue-500 hover:to-green-500  hover:text-white cursor-pointer">
+    <div className="flex justify-center mt-20">
+    <div  className="bg-white p-6 rounded-lg shadow-md border border-gray-200 pt-9 transition duration-300 ease-in-out hover:bg-gradient-to-r hover:from-blue-500 hover:to-green-500
+     hover:text-white cursor-pointer max-w-[540px] w-full ">
       <h2 className="text-3xl font-bold mb-6 ">{user.name}'s Profile</h2>
       <p><strong>Email:</strong> {user.email}</p>
       <p><strong>Username:</strong> {user.username}</p>
       <p><strong>Phone:</strong> {user.phone}</p>
       <p><strong>Website:</strong> {user.website}</p>
       <p><strong>City:</strong> {user.address.city}</p>
+    </div>
     </div>
   )
 }
